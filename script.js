@@ -21,9 +21,9 @@ function surpriseMessage() {
     const video = document.getElementById('surpriseVideo');
     
     // Substitua o link abaixo pelo URL do vídeo que você quer exibir do YouTube
-    const videoURL = "https://www.youtube.com/watch?v=IiNZeHV0an4";  // Substitua pelo seu link do YouTube
+    const videoURL = "https://www.youtube.com/embed/IiNZeHV0an4";  // Link do YouTube no formato embed
     
-    video.src = videoURL; // Definir o src do iframe para o link do vídeo
+    video.src = videoURL + "?autoplay=1"; // O parâmetro ?autoplay=1 faz o vídeo começar automaticamente
     videoContainer.style.display = 'block'; // Torna o vídeo visível
 }
 
