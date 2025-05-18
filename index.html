@@ -5,18 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feliz Aniversário, Isazinha!</title>
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Adicionando a biblioteca de confetes -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>Feliz Aniversário, Isazinha <3!</h1>
             <p>Lhe conheço desde os meus 15 anos de idade, desde lá nossa amizade só cresce! Eu te amo muito! Muito obrigada pela sua amizade! 🎉💖</p>
-        </div>
-        <div class="confetti">
-            <!-- Confete animado será adicionado aqui -->
         </div>
         <div class="timeline">
             <h2>Nossa História</h2>
@@ -25,11 +19,17 @@
         <div class="footer">
             <button id="surpriseBtn">Clique para uma surpresa!</button>
         </div>
+
+        <!-- Vídeo do YouTube escondido inicialmente -->
+        <div id="videoContainer" style="display: none;">
+            <iframe id="surpriseVideo" width="100%" height="400" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
-    <audio id="birthdaySong" loop>
+
+    <audio id="birthdaySong" preload="auto" loop>
         <source src="birthdaySong.mp3" type="audio/mp3">
-        Seu navegador não suporta o áudio.
     </audio>
+
     <script src="script.js"></script>
 </body>
 </html>
