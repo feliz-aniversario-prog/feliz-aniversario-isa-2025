@@ -1,22 +1,28 @@
 // Função para exibir uma mensagem surpresa e lançar os confetes
 function surpriseMessage() {
     alert("Você é muito importante para mim! Amo muito você, espero que eu veja você crescer mais e mais!");
-    
+
     // Tocar a música após o clique
     const audio = document.getElementById('birthdaySong');
-    audio.play().catch((error) => {
-        console.log("Erro ao tentar tocar a música:", error);
-        alert("A música não pôde ser reproduzida. Por favor, verifique o arquivo de áudio.");
-    });
+
+    // Tocar a música sem esperar
+    if (audio.paused) {
+        audio.play().catch((error) => {
+            console.log("Erro ao tentar tocar a música:", error);
+            alert("A música não pôde ser reproduzida. Por favor, verifique o arquivo de áudio.");
+        });
+    }
 
     // Gerar confetes
     launchConfetti();
 }
 
-// Função para lançar confetes na tela
+// Função para lançar confetes na tela com cores personalizadas
 function launchConfetti() {
     var duration = 15 * 1000; // duração em milissegundos (15 segundos)
     var animationEnd = Date.now() + duration;
+    
+    var colors = ['#FF007F', '#FFBF00', '#00BFFF', '#32CD32', '#FF1493', '#FF6347']; // Cores vibrantes
     
     var interval = setInterval(function () {
         confetti({
@@ -24,12 +30,14 @@ function launchConfetti() {
             angle: 60,
             spread: 55,
             origin: { x: 0 },
+            colors: colors, // Definindo as cores
         });
         confetti({
             particleCount: 10,
             angle: 120,
             spread: 55,
             origin: { x: 1 },
+            colors: colors, // Definindo as cores
         });
 
         if (Date.now() > animationEnd) {
