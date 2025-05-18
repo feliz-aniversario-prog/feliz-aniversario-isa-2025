@@ -1,12 +1,10 @@
-// Função para exibir uma mensagem surpresa e lançar os confetes
+// Função para exibir uma mensagem surpresa, lançar confetes e mostrar o vídeo do YouTube
 function surpriseMessage() {
-    alert("Você é muito importante para mim! Amo muito você <3! Ahh.. Coma bolo por mim, ok? Essa música é para você...! Se chama Birthday Prayer, 'Oração de Aniversário' e tem uma parte que diz 'Por favor, Deus, cuida de mim, entra em mim para que eu possa ser livre, ajuda-me a respirar devagar, sem medo
-
-'");
+    alert("Você é muito importante para mim! Amo muito você <3! Ahh.. Coma bolo por mim, ok? Essa música é para você...! Se chama Birthday Prayer, 'Oração de Aniversário' e tem uma parte que diz 'Por favor, Deus, cuida de mim, entra em mim para que eu possa ser livre, ajuda-me a respirar devagar, sem medo'");
 
     // Tocar a música após o clique
     const audio = document.getElementById('birthdaySong');
-
+    
     // Tocar a música sem esperar
     if (audio.paused) {
         audio.play().catch((error) => {
@@ -17,6 +15,16 @@ function surpriseMessage() {
 
     // Gerar confetes
     launchConfetti();
+
+    // Exibir o vídeo do YouTube após o clique
+    const videoContainer = document.getElementById('videoContainer');
+    const video = document.getElementById('surpriseVideo');
+    
+    // Substitua o link abaixo pelo URL do vídeo que você quer exibir do YouTube
+    const videoURL = "https://www.youtube.com/watch?v=IiNZeHV0an4";  // Substitua pelo seu link do YouTube
+    
+    video.src = videoURL; // Definir o src do iframe para o link do vídeo
+    videoContainer.style.display = 'block'; // Torna o vídeo visível
 }
 
 // Função para lançar confetes na tela com cores personalizadas
