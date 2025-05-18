@@ -3,7 +3,11 @@ function surpriseMessage() {
     alert("Você é muito importante para mim! Amo muito você, espero que eu veja você crescer mais e mais!");
 }
 
-// Iniciar música de feliz aniversário
+// Espera a página carregar completamente antes de executar qualquer código
 window.onload = () => {
+    // Tocar a música de Feliz Aniversário assim que a página for carregada
     document.getElementById('birthdaySong').play();
+
+    // Adicionar o evento ao botão para mostrar a surpresa
+    document.getElementById('surpriseBtn').addEventListener('click', surpriseMessage);
 };
