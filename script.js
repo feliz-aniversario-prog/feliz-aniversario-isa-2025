@@ -1,6 +1,8 @@
 // Função para exibir uma mensagem surpresa e lançar os confetes
 function surpriseMessage() {
-    alert("Você é muito importante para mim! Amo muito você, espero que eu veja você crescer mais e mais!");
+    alert("Você é muito importante para mim! Amo muito você <3! Ahh.. Coma bolo por mim, ok? Essa música é para você...! Se chama Birthday Prayer, 'Oração de Aniversário' e tem uma parte que diz 'Por favor, Deus, cuida de mim, entra em mim para que eu possa ser livre, ajuda-me a respirar devagar, sem medo
+
+'");
 
     // Tocar a música após o clique
     const audio = document.getElementById('birthdaySong');
