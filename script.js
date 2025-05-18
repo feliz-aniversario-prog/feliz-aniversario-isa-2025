@@ -5,7 +5,7 @@ function surpriseMessage() {
     // Tocar a música após o clique
     const audio = document.getElementById('birthdaySong');
     
-    // Tocar a música sem esperar
+    // Tocar a música uma vez, sem loop
     if (audio.paused) {
         audio.play().catch((error) => {
             console.log("Erro ao tentar tocar a música:", error);
